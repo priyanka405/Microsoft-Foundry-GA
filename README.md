@@ -32,8 +32,6 @@ This lifecycle ensures:
 
 ## 2a. Agent Architecture (High Level)
 
-> Build, deploy, and operate secure, enterprise-grade AI agents with Microsoft Foundry
-
 
 <img width="1536" height="1024" alt="Designer (15)" src="https://github.com/user-attachments/assets/b4009c34-a573-4164-b601-4a170b7ec63e" />
 
