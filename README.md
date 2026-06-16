@@ -30,6 +30,85 @@ This lifecycle ensures:
 
 ---
 
+## 2a. Agent Architecture (High Level)
+
+> Build, deploy, and operate secure, enterprise-grade AI agents with Microsoft Foundry
+
+![Microsoft Foundry – Agent Architecture (High Level)](./agent-architecture.png)
+
+### Architecture Overview
+
+The diagram above illustrates the full agent architecture within a **Microsoft Foundry Project**, covering:
+
+#### 🔵 Sources & Inputs
+| Source | Examples |
+|--------|---------|
+| User / Channels | Web / Mobile App, Teams / Slack, API / SDK |
+| Enterprise Data | Documents, Databases, Files / SharePoint, Knowledge Bases |
+| Real-time Data | APIs, Events / Streams, IoT / Telemetry |
+| Unstructured Content | PDF / Images, Audio / Video, Email / Chats |
+
+#### 🤖 Agent Orchestration (Core Loop)
+The agent operates in a continuous cycle:
+1. **Plan** – Understand goal & create plan
+2. **Reason** – Break down tasks & decide actions
+3. **Act** – Invoke tools & services
+4. **Observe** – Process results & iterate
+5. **Respond** – Generate final response
+
+*Memory (Short-term Session State)* flows across all orchestration steps.
+
+#### 🧠 Model Layer
+- **Azure OpenAI Service** (Foundation / LLMs)
+- **Other Foundry Models** (Microsoft / OSS / Partner)
+- **Model Gateway & Routing** (Safety, Cost, Latency)
+
+#### 🛠️ Tool & Service Layer
+- **Foundry Tools (Built-in):** Web Search, Code Interpreter, File Search, Computer Use, etc.
+- **Custom Tools:** Functions, APIs, Connectors
+- **MCP / OpenAPI / REST** – Standardized tool integration
+
+#### 📚 Knowledge Layer (RAG)
+- **Azure AI Search** (Vector + Hybrid Search)
+- **Embeddings** (Azure OpenAI Embeddings)
+- **Indexing Pipeline** (Chunk, Enrich, Embed, Index)
+- **Data Connectors** (Blob, DB, Confluence, SharePoint, Websites)
+
+#### 🏢 Enterprise Systems & Actions
+| Category | Examples |
+|----------|---------|
+| Business Applications | ERP / CRM, ITSM, Custom Apps |
+| Process Automation | Logic Apps, Power Automate, Workflows |
+| Data Stores | SQL / Cosmos DB, Data Lake / Storage, Operational DBs |
+| External Systems | SaaS / 3rd Party APIs, Partner Systems, Internet Services |
+
+#### 📊 Observability, Evaluation & Governance
+| Capability | Details |
+|-----------|---------|
+| **Evaluations** | Quality / Correctness, Safety / Groundedness, Custom Metrics |
+| **Tracing** | End-to-end Traces, Tool Calls, Latency Analysis |
+| **Monitoring** | Performance, Usage / Token, Cost Monitoring |
+| **Guardrails & Safety** | Content Safety, Prompt Shields, PII / Data Protection |
+| **Red Teaming** | Vulnerability Testing, Jailbreak Testing, Risk Assessment |
+| **Audit & Compliance** | Audit Logs, Access Logs, Policy Compliance |
+
+#### 🔐 Security, Identity & Governance (Cross-cutting)
+| Domain | Details |
+|--------|---------|
+| **Microsoft Entra ID (RBAC)** | Users, Groups, Service Principals |
+| **Private Networking** | VNet, Private Link, NSG, Firewall |
+| **Data Security** | Encryption (At-rest/In-transit), Keys (Key Vault) |
+| **Policies & Compliance** | Azure Policy, Purview, Regulatory Compliance |
+| **Cost Management** | Budgets, Alerts, Chargeback |
+| **Environment Strategy** | Dev / Test / Prod Landing Zones |
+
+> **Notes:**
+> - Secure by design
+> - Scalable & highly available
+> - Built-in enterprise governance
+
+---
+
 ## 3. What GA Means (Key Capabilities)
 
 At GA, Foundry provides:
