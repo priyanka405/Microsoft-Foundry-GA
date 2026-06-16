@@ -34,7 +34,9 @@ This lifecycle ensures:
 
 > Build, deploy, and operate secure, enterprise-grade AI agents with Microsoft Foundry
 
-![Microsoft Foundry – Agent Architecture (High Level)](./agent-architecture.png)
+
+<img width="1536" height="1024" alt="Designer (15)" src="https://github.com/user-attachments/assets/b4009c34-a573-4164-b601-4a170b7ec63e" />
+
 
 ### Architecture Overview
 
